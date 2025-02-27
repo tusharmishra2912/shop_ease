@@ -62,8 +62,9 @@ class HomeScreen extends StatelessWidget {
                       title: index == 0 ? todayDeal : flashsale
                   )),
                 ),
-                // second slider
-                10.heightBox,
+                // second 2nswipper
+                //swipeers brands
+                20.heightBox,
                 VxSwiper.builder(
                     aspectRatio:16/9,
                     autoPlay: true,
@@ -102,11 +103,83 @@ class HomeScreen extends StatelessWidget {
                       featuredButton(icon: featuredImages2[index],title: freaturedTitles2[index]),
 
                     ],
-                  )),
-                ),)
-              ],
-            ),),)
+                  )
+                  ).toList(),
+                ),),
 
+                //featured product
+                20.heightBox,
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  width: double.infinity,
+                  decoration: const BoxDecoration(color: redColor),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      featuredProduct.text.white.fontFamily(bold).size(18).make(),
+                      10.heightBox,
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children:List.generate(6, (index) => Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.asset(imgP1,
+                                width: 150,
+                                fit: BoxFit.cover,),
+                              10.heightBox,
+                              "Laptop 4Gb/64Gb".text.fontFamily(semibold).color(darkFontGrey).make(),
+                              10.heightBox,
+                              "\$500".text.color(redColor).fontFamily(bold).size(16).make(),
+                              10.heightBox,
+                            ],
+                          ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(8)).make()),
+                        ),),
+                    ],
+                  ),
+                ),
+                20.heightBox,
+                VxSwiper.builder(
+                    aspectRatio:16/9,
+                    autoPlay: true,
+                    height: 150,
+                    enlargeCenterPage: true,
+                    itemCount: secondSlidersList.length,
+                    itemBuilder: (context,index) {
+                      return Image.asset(
+                        secondSlidersList[index],
+                        fit: BoxFit.fill,
+                      ).box.rounded.clip(Clip.antiAlias).margin(const EdgeInsets.symmetric(horizontal:8 )).make();
+                    }),
+
+                  //all product section
+                  20.heightBox,
+                 GridView.builder(
+                     physics:const NeverScrollableScrollPhysics(),
+                     shrinkWrap: true,
+                    itemCount: 6,
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing:8 ,crossAxisSpacing: 8 ,mainAxisExtent: 300 ),
+                    itemBuilder: (context,index){
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset(imgP5,
+                          height: 200,
+                          width: 200,
+                          fit: BoxFit.cover,
+                        ),
+                        const Spacer(),
+                        "Laptop 4Gb/64Gb".text.fontFamily(semibold).color(darkFontGrey).make(),
+                        10.heightBox,
+                        "\$500".text.color(redColor).fontFamily(bold).size(16).make()
+                      ],
+                    ).box.white.margin(const EdgeInsets.symmetric(horizontal: 4)).roundedSM.padding(const EdgeInsets.all(12)).make();
+                    })
+
+
+
+              ],
+            ),),),
 
           ],
         )

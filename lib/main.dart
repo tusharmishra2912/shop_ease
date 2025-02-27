@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shop_ease/consts/consts.dart';
 import 'package:shop_ease/views/splash_screen/splash_screen.dart';
@@ -19,7 +18,13 @@ class MyApp extends StatelessWidget {
       title: 'SHOPEASE',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.red,
-        appBarTheme: const AppBarTheme(backgroundColor: Colors.transparent),
+        appBarTheme: const AppBarTheme(
+          // to set app bar icons color
+          iconTheme: IconThemeData(
+            color: darkFontGrey,
+          ),
+            elevation: 0.0,
+            backgroundColor: Colors.transparent),
         fontFamily: regular,
       ),
       home: const SplashScreen(),
