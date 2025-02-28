@@ -18,3 +18,8 @@ const freaturedTitles2=[boysGlasses,mobilePhone,tShirt];
 const categoriesList=[womenDress,menClothingFashion,compAccess,automobile,kidtoys,sports,jewelery,cellphone,furniture];
 const categoryImages=[imgFc1,imgFc2,imgFc3,imgFc4,imgFc5,imgFc6,imgFc7,imgFc8,imgFc9];
 
+const itemDetaillButtonList=[video,reviews,privacyPolicy,returnpolicy,supportpolicy];
+
+const profileButtonsList=[orders,wishlist,messages];
+const profileButtonsIcon=[icOrder,icOrder,icMessages];
+

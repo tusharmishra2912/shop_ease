@@ -16,6 +16,7 @@ const loginWith="Log in with";
 const privacyPolicy="Privacy Policy";
 const termAndCond="Terms and Conditions";
 const alreadyHaveAccount="Already have an account?";
+const logout="Log out";
 
 //home string
 const home="Home" ,categories="Categories",cart="Cart",account="Account";
@@ -48,5 +49,17 @@ const womenClothing="Women Clothing",
     jewelery="Jewelery",
     cellphone="Cellphone & Tab",
     furniture ="Furniture";
+
+// items details strings
+
+const video="Video",
+    reviews="Reviews",
+    sellerpolicy="Seller Policy",
+    returnpolicy="Return Policy",
+    supportpolicy="Support Policy",
+    productsyoumaylike="Products you may also like";
+
+//profile strings
+const wishlist="My Wishlist" ,orders="My Orders", messages="Messages";
 
 
